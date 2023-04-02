@@ -25,7 +25,7 @@ html {
 }
 
 
-.start-wrapper{
+.start-wrapper, .intro-wrapper, .portfolio-wrapper, .contact-wrapper{
   background: black;
   width:100vw;
   height: 100vh;
@@ -36,6 +36,45 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: transparent;
+  color: wheat;
 }
+
+.start-heading {
+  color: transparent;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    color: transparent;
+  }
+
+  100% {
+    opacity: 1;
+    color: wheat;
+  }
+}
+
+.start{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: wheat
+}
+
+.name {
+  font-size: 6rem;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: all 1s ease;
+}
+
+.name.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 

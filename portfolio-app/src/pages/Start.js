@@ -1,7 +1,21 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 const Start = () => {
-  return <div className="start-wrapper">Start</div>;
+  const [showName, setShowName] = useState(false);
+
+  useEffect(() => {
+    setShowName(true);
+  }, []);
+
+  return (
+    <div className="start-wrapper">
+      <div className="start">
+        <h1 className={`name ${showName ? "show" : ""}`}>Sushant</h1>
+        <p>front end developer</p>
+        <h1 className={`name ${showName ? "show" : ""}`}>Chhetry</h1>
+      </div>
+    </div>
+  );
 };
 
 export default Start;
