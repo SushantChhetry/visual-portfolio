@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
