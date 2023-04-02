@@ -11,7 +11,8 @@ html {
 .links{
   list-style: none;
 }
-#home, #connect, #intro, #portfolio{
+
+#home, #contact, #intro, #portfolio{
   width: 100vw;
   height: 100vh;
 }
@@ -20,11 +21,14 @@ html {
 .nav{
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 
-.home-wrapper{
+.start-wrapper{
   background: black;
+  width:100vw;
+  height: 100vh;
 }
 
 nav {
@@ -34,3 +38,4 @@ nav {
   width: 100%;
   background-color: #fff;
 }
+
