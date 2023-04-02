@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+import Link from "next/link";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +15,9 @@ const Nav = () => {
       <nav className="nav">
         <h1>SUSHANT</h1>
         <span>
-          <button onClick={toggleMenu}>Click Me</button>
+          <button onClick={toggleMenu}>
+            <FontAwesomeIcon icon={faBars} className="navbtn" size="2xl" />
+          </button>
           {isOpen ? (
             <ul className="links">
               <li className="navbtn">UP</li>

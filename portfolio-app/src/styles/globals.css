@@ -24,11 +24,25 @@ html {
   z-index: 1;
 }
 
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: wheat;
+}
 
-.start-wrapper, .intro-wrapper, .portfolio-wrapper, .contact-wrapper{
+
+.start-wrapper,  .portfolio-wrapper{
   background: black;
   width:100vw;
   height: 100vh;
+}
+.intro-wrapper,.contact-wrapper {
+  background: wheat;
+  width: 100vw;
+  height: 100vh;
+  color: black;
 }
 
 nav {
@@ -77,6 +91,36 @@ nav {
 .name.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.intro-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro{
+  width:80vw;
+  height: 80vh;
+  color: wheat;
+  background-color: black;
+  padding: 5%;
+}
+.portfolio-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+.portfolio-wrapper > h1{
+    color: wheat;
+}
+.proj{
+  width: 70vw;
+  height: 20vh;
+  background-color: wheat;
 }
 
 

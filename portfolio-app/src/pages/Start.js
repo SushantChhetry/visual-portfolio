@@ -13,6 +13,8 @@ const Start = () => {
         <h1 className={`name ${showName ? "show" : ""}`}>Sushant</h1>
         <p>front end developer</p>
         <h1 className={`name ${showName ? "show" : ""}`}>Chhetry</h1>
+        <button>Resume</button>
+        <button>Gallery</button>
       </div>
     </div>
   );
