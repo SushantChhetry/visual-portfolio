@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import home from "./home";
 import intro from "./intro";
-import portfolio from "./portfolio";
+import portfolio from "./Portfolio";
 import connect from "./connect";
 import Nav from "./component/Nav";
 

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const intro = () => {
-  return (
-    <div>intro</div>
-  )
-}
+  return <div className="intro-wrapper">intro</div>;
+};
 
-export default intro
+export default intro;
