@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Nav from "./component/Nav";
-
+import { useState, useEffect } from "react";
 // pages
 import Start from "./Start";
 import Intro from "./Intro";
@@ -11,6 +11,20 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
 export default function Home() {
+  const [yOffset, setYOffset] = useState(0);
+
+  const handleScroll = () => {
+    setYOffset(window.pageYOffset);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Head>
