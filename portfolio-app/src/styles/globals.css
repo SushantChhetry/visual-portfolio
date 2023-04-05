@@ -131,8 +131,6 @@ nav {
   flex-direction: column;
 }
 
-form {
-}
 
 label {
   display: block;
@@ -177,4 +175,18 @@ input[type="submit"]:focus {
 
 textarea {
   height: 150px;
+}
+
+.item {
+  opacity: 0;
+  transition: opacity 0.75s;
+  background-color: wheat;
+  color: black;
+  width: 70vw;
+    height: 20vh;
+    font-weight: bold;
+}
+
+.item.visible {
+  opacity: 1;
 }

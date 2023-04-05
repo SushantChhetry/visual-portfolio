@@ -1,4 +1,5 @@
-import React from "react";
+import { useRef, useState, useEffect } from "react";
+import "intersection-observer";
 
 const portfolio = () => {
   const projs = [
@@ -18,21 +19,44 @@ const portfolio = () => {
       description: "short description about this project",
     },
   ];
+
+  const [visibleIndex, setVisibleIndex] = useState(null);
+
+  const containerRef = useRef(null);
+  const itemRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = itemRefs.current.indexOf(entry.target);
+          setVisibleIndex(index);
+        }
+      });
+    });
+
+    itemRefs.current.forEach((itemRef) => {
+      observer.observe(itemRef);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="portfolio-wrapper">
       <h1>PROJECTS</h1>
-      {projs.map((proj, key) => {})}
-      <div className="proj">
-        <h3>title</h3>
-        <p>this is a description of the project</p>
-      </div>
-      <div className="proj">
-        <h3>title</h3>
-        <p>this is a description of the project</p>
-      </div>
-      <div className="proj">
-        <h3>title</h3>
-        <p>this is a description of the project</p>
+      <div ref={containerRef}>
+        {projs.map((item, index) => (
+          <div
+            key={index}
+            ref={(el) => (itemRefs.current[index] = el)}
+            className={`item ${visibleIndex >= index ? "visible" : ""}`}
+          >
+            {item["title"]}
+          </div>
+        ))}
       </div>
     </div>
   );
