@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
 *{
   box-sizing: border-box;
   margin: 0;
-font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Pangolin', cursive;}
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
+body{margin: 0;}
 
 .links{
   list-style: none;
@@ -115,6 +118,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 5vh;
+  
 }
 
 .portfolio-wrapper > h1{
@@ -189,4 +193,35 @@ textarea {
 
 .item.visible {
   opacity: 1;
+}
+
+
+.sushi-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(228, 218, 218);
+}
+
+.sushi-rice{
+  background: white;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 150vw;
+    background-image: url("/portfolio-app/public/rice.png");
+}
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+}
+
+.canvas {
+  background: #000;
 }

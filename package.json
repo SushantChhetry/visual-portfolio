@@ -4,6 +4,11 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "intersection-observer": "^0.12.2",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "react-slick": "^0.29.0",
+    "react-three-fiber": "^6.0.13",
+    "slick-carousel": "^1.8.1",
+    "three": "^0.151.3"
   }
 }
