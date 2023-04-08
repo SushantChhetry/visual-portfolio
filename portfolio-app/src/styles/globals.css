@@ -20,6 +20,17 @@ body{margin: 0;}
   height: 100vh;
 }
 
+#contact{
+  background: blue;
+}
+
+#intro{
+  background: #3e8e41;
+}
+
+#portfolio{
+  background: red;
+}
 /* nav */
 .nav{
   display: flex;

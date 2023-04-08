@@ -36,6 +36,9 @@ export default function Home() {
             <button className="btn">Connect</button>
           </div>
         </div>
+        <section id="intro"></section>
+        <section id="contact"></section>
+        <section id="portfolio"></section>
       </main>
     </>
   );
