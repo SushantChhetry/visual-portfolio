@@ -8,6 +8,7 @@ import Controls from "./component/OrbitControls";
 const Sushi = () => {
   return (
     <div className="scene">
+      
       <Canvas
         shadows
         className="canvas"
@@ -15,11 +16,12 @@ const Sushi = () => {
           position: [-6, 7, 7],
         }}
       >
-        <ambientLight color={"white"} intensity={0.2} />
+        <ambientLight color={"white"} intensity={0.5} />
         <LightBulb position={[0, 4, 0]} />
-        <Box rotateX={3} rotateY={0.2} />
+        <Box rotateX={3} rotateY={0.2} scale={[5, 5, 5]} />
         <Controls />
       </Canvas>
+     
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { GiSushis } from "react-icons/gi";
 
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ const Nav = () => {
         <h1>SUSHANT</h1>
         <span>
           <button onClick={toggleMenu}>
-            <FontAwesomeIcon icon={faBars} className="navbtn" size="2xl" />
+            <GiSushis />
           </button>
           {isOpen ? (
             <ul className="links">

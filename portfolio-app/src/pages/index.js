@@ -26,8 +26,15 @@ export default function Home() {
         ></link>
       </Head>
       <main>
+        <Nav />
         <div className="sushi-wrapper">
+          <h5>Hi! I am</h5>
+          <h1>SUSHANT CHHETRY</h1>
           <Sushi />
+          <div className="btn-wrapper">
+            <button className="btn">Resume</button>
+            <button className="btn">Connect</button>
+          </div>
         </div>
       </main>
     </>
