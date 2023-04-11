@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Nav from "./component/Nav";
+import Link from "next/link";
 
 // pages
 import Start from "./Start";
@@ -33,12 +34,20 @@ export default function Home() {
           <Sushi />
           <div className="btn-wrapper">
             <button className="btn">Resume</button>
-            <button className="btn">Connect</button>
+            <Link href={"#contact"}>
+              <button className="btn">Connect</button>
+            </Link>
           </div>
         </div>
-        <section id="intro"></section>
-        <section id="contact"></section>
+        <section id="intro">
+          <div class="bento-box">
+            <div class="compartment big"></div>
+            <div class="compartment"></div>
+            <div class="compartment"></div>
+          </div>
+        </section>
         <section id="portfolio"></section>
+        <section id="contact"></section>
       </main>
     </>
   );
