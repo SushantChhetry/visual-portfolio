@@ -12,6 +12,9 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Sushi from "./Sushi";
 
+//components
+import MovableDiv from "./component/MovableDiv";
+
 export default function Home() {
   return (
     <>
@@ -54,6 +57,7 @@ export default function Home() {
               </p>
             </div>
             <div class="compartment">
+              <MovableDiv />
               <ul>
                 <li>Logo</li>
                 <li>Logo</li>
@@ -69,8 +73,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="portfolio"></section>
-        <section id="contact"></section>
+        <section id="portfolio">
+          <Portfolio />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
     </>
   );

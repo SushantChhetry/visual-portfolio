@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="contact-wrapper">
-      <h1>CONTACT ME</h1>
+      <h1>CONNECT WITH ME</h1>
       <form>
         <label for="firstname">First Name:</label>
         <input type="text" placeholder="first name" required />
