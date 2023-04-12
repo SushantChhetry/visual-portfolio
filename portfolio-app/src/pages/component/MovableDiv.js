@@ -1,9 +1,20 @@
 import { useState } from "react";
 
-const MovableDiv = () => {
+const MovableDiv = ({ xPos, yPos }) => {
+  const [textDiv, setTextDiv] = useState("Movable Div");
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffSet, setDragOffSet] = useState({ x: 0, y: 0 });
-  const [position, setPosition] = useState({ x: 50, y: 50 });
+  const [position, setPosition] = useState({ x: xPos, y: yPos });
+  const [divStyle, setDivStyle] = useState({
+    position: "absolute",
+    top: position.y,
+    left: position.x,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "blue",
+    color: "white",
+    cursor: "move",
+  });
 
   const handleMouseDown = (event) => {
     setIsDragging(true);
@@ -24,26 +35,23 @@ const MovableDiv = () => {
 
   const handleMouseUp = () => {
     setIsDragging(false);
+
+    setDivStyle({
+      width: "0%",
+      height: "0%",
+    });
+    setTextDiv("");
   };
 
   return (
     <div
       className="drag-div"
-      style={{
-        position: "absolute",
-        top: position.y,
-        left: position.x,
-        width: 100,
-        height: 100,
-        backgroundColor: "blue",
-        color: "white",
-        cursor: "move",
-      }}
+      style={divStyle}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
-      MovableDiv
+      {textDiv}
     </div>
   );
 };

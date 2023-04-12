@@ -40,7 +40,7 @@ body{margin: 0;}
 
 
 
-.start-wrapper,  .portfolio-wrapper{
+.start-wrapper{
   background: black;
   width:100vw;
   height: 100vh;
@@ -284,4 +284,10 @@ textarea {
 .proj-control{
   flex:1;
   border:solid wheat;
+}
+
+
+.slider{
+  width:50%;
+  text-align: center;
 }
