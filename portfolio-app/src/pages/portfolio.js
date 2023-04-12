@@ -8,12 +8,38 @@ import MovableDiv from "./component/MovableDiv";
 
 import "slick-carousel/slick/slick-theme.css";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "blue", top: "50vh" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green", top: "50vh" }}
+      onClick={onClick}
+    />
+  );
+}
+
 const portfolio = () => {
   var settings = {
     dots: true,
-    speed: 500,
-    slidesToShow: 1,
+    fade: true,
+    speed: 700,
+    infinite: true,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   const posRef = useRef(null);
@@ -33,22 +59,22 @@ const portfolio = () => {
       <h1>PROJECTS</h1>
       <Slider {...settings} className="slider">
         <div>
-          <h3>this is a text1</h3>
+          <h3>1</h3>
         </div>
         <div>
-          <h3>this is a text2</h3>
+          <h3>2</h3>
         </div>
         <div>
-          <h3>this is a text3</h3>
+          <h3>3</h3>
         </div>
         <div>
-          <h3>this is a text4</h3>
+          <h3>4</h3>
         </div>
         <div>
-          <h3>this is a text5</h3>
+          <h3>5</h3>
         </div>
         <div>
-          <h3>this is a text6</h3>
+          <h3>6</h3>
         </div>
       </Slider>
     </div>
