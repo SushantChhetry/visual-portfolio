@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+import Image from "next/image";
+
 import MovableDiv from "./component/MovableDiv";
 
 import "slick-carousel/slick/slick-theme.css";
@@ -13,7 +15,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "blue", top: "50vh" }}
+      style={{ ...style, display: "block", background: "blue", top: "70vh" }}
       onClick={onClick}
     />
   );
@@ -24,7 +26,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green", top: "50vh" }}
+      style={{ ...style, display: "block", background: "green", top: "70vh" }}
       onClick={onClick}
     />
   );
@@ -58,23 +60,25 @@ const portfolio = () => {
       <MovableDiv xPos={x} yPos={y} />
       <h1>PROJECTS</h1>
       <Slider {...settings} className="slider">
-        <div>
-          <h3>1</h3>
+        <div
+          style={{
+            display: "block",
+            background: "green",
+          }}
+        >
+          <div className="slide"></div>
         </div>
         <div>
-          <h3>2</h3>
+          <div className="slide"></div>
         </div>
         <div>
-          <h3>3</h3>
+          <div className="slide"></div>
         </div>
         <div>
-          <h3>4</h3>
+          <div className="slide"></div>
         </div>
         <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
+          <div className="slide"></div>
         </div>
       </Slider>
     </div>
