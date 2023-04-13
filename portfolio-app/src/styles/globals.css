@@ -45,11 +45,20 @@ body{margin: 0;}
   width:100vw;
   height: 100vh;
 }
-.intro-wrapper,.contact-wrapper {
+.intro-wrapper {
   background: wheat;
   width: 100vw;
   height: 100vh;
   color: black;
+  padding: 10%;
+}
+
+.contact-wrapper {
+  background: wheat;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  padding: 10%;
 }
 
 nav {
