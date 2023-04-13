@@ -13,7 +13,7 @@ import Contact from "./Contact";
 import Sushi from "./Sushi";
 
 //components
-import MovableDiv from "./component/MovableDiv";
+import Resume from "./Resume";
 
 export default function Home() {
   return (
@@ -31,7 +31,9 @@ export default function Home() {
           <h1>SUSHANT CHHETRY</h1>
           <Sushi />
           <div className="btn-wrapper">
-            <button className="btn">Resume</button>
+            <Link href={"/Resume"} target="_blank">
+              <button className="btn">Resume</button>
+            </Link>
             <Link href={"#contact"}>
               <button className="btn">Connect</button>
             </Link>
