@@ -44,20 +44,9 @@ const portfolio = () => {
     prevArrow: <SamplePrevArrow />,
   };
 
-  const posRef = useRef(null);
-  const [x, setX] = useState(null);
-  const [y, setY] = useState(null);
-
-  useEffect(() => {
-    const node = posRef.current;
-    const winPos = node.getBoundingClientRect();
-    setX(winPos.x);
-    setY(winPos.y);
-  }, [posRef]);
 
   return (
-    <div className="portfolio-wrapper" ref={posRef}>
-      <MovableDiv xPos={x} yPos={y} />
+    <div className="portfolio-wrapper" >
       <h1>PROJECTS</h1>
       <Slider {...settings} className="slider">
         <div
