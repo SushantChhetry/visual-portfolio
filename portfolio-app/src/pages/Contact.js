@@ -1,28 +1,65 @@
-import React from "react";
-import nodemailer from "nodemailer";
+import { useState } from "react";
+import { SendMail } from "./api/send-mail";
 
 const Contact = () => {
-  // verify connection configuration
-  transporter.verify(function (error, success) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Server is ready to take our messages");
-    }
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
   });
+
+  const handleFormChange = (event) => {
+    setFormData({
+      event.key:event.target.value;
+    })
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await SendMail(formData);
+      alert(`Message sent successfully!`);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.log(error);
+      alert(`An error has occured while sending this email`);
+    }
+  };
 
   return (
     <div className="contact-wrapper">
       <h1>CONNECT WITH ME</h1>
       <form onSubmit={handleSubmit}>
-        <label for="firstname">First Name:</label>
-        <input type="text" placeholder="first name" required />
-        <label for="lastname">Last Name:</label>
-        <input type="text" placeholder="last name" />
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="name"
+          required
+          onChange={(e) => {
+            setFormData({...formData, name:e.target.value});
+          }}
+        />
+       
         <label for="email">Email:</label>
-        <input type="email" placeholder="email" required />
+        <input
+          type="email"
+          name="email"
+          placeholder="email"
+          required
+          onChange={(e) => {
+            setFormData({...formData, email:e.target.value});
+          }}
+        />
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>{" "}
+        <textarea
+          id="message"
+          name="message"
+          required
+          onChange={(e) => {
+            setFormData({...formData, message:e.target.value})
+          }}
+        ></textarea>{" "}
         <input type="submit" />
       </form>
     </div>
