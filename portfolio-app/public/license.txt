@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sushi roll
+* source:	https://sketchfab.com/3d-models/sushi-roll-2d5107a9476d47a0b27c17f589836133
+* author:	Just8 (https://sketchfab.com/Just8)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sushi roll" (https://sketchfab.com/3d-models/sushi-roll-2d5107a9476d47a0b27c17f589836133) by Just8 (https://sketchfab.com/Just8) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

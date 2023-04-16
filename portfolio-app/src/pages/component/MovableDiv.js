@@ -9,11 +9,12 @@ const MovableDiv = ({ xPos, yPos }) => {
     position: "absolute",
     top: position.y,
     left: position.x,
-    width: "100%",
-    height: "100%",
-    backgroundColor: "blue",
-    color: "white",
-    cursor: "move",
+    width: "80%",
+    height: "80%",
+    backgroundColor: "#F5F5F5",
+    borderRadius: " 0 0 10px 10px",
+    boxShadow: " 0 2px 2px rgba(0, 0, 0, 0.25)",
+    transform: "skew(-10deg)",
   });
 
   const handleMouseDown = (event) => {

@@ -22,12 +22,10 @@ const intro = () => {
 
         <div class="compartment big">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            finibus hendrerit diam, id pellentesque lacus placerat et. Aliquam
-            ut ultrices arcu. Vestibulum bibendum sed ligula non tristique. Nam
-            aliquam pellentesque arcu et vestibulum. Donec quam libero, eleifend
-            sed vehicula sed, rutrum vel massa. In vestibulum est vitae arcu
-            convallis, non varius nunc posuere.
+            Hi, I'm Sushant, a frontend developer with a passion for creating
+            beautiful and functional websites. With expertise in HTML, CSS, and
+            JavaScript, I specialize in developing responsive websites that
+            deliver a seamless user experience. Welcome to my portfolio!
           </p>
         </div>
         <div class="compartment">
