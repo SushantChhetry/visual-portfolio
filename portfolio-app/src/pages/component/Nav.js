@@ -43,6 +43,15 @@ const Nav = () => {
         >
           <GiSushis size={32} />
         </button>
+        {isOpen ? (
+          <div className="nav-list">
+            <ul>
+              <li>Contact</li>
+            </ul>
+          </div>
+        ) : (
+          ""
+        )}
       </nav>
     </div>
   );

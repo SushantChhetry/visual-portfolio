@@ -3,7 +3,7 @@
 *{
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Pangolin', cursive;}
+  font-family: 'Roboto'}
 
 html {
     scroll-behavior: smooth;
@@ -241,6 +241,7 @@ textarea {
 
 .canvas {
   background: transparent; 
+ 
 }
 
 .btn-wrapper{
@@ -254,6 +255,12 @@ textarea {
 .btn{
   background-color: black;
   color: wheat;
+  
+    width: 130px;
+    height: 40px;
+    border: none;
+    font-weight: bolder;
+  margin: 15%;
 }
 
 .bento-box {
@@ -313,5 +320,48 @@ textarea {
   padding-right: 40px;
 }
 
-.header{}
 
+.nav-list{
+  position: "fixed";
+      width: 100vw;
+      z-index: 3;
+      background: #bebebe;
+}
+
+.form-wrapper{
+  padding: 8% 10%;
+  background: whitesmoke;
+  height: 100%;
+  width: 100%;
+
+}
+
+.form-wrapper > button{
+  background-color: #4CAF50;
+}
+
+.form-wrapper > h1, p {
+  text-align: center;
+}
+
+.social-list{
+  border-top: solid black;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  padding:2% 0% 3% 0%
+}
+
+.submit-btn{
+  background: #afafaf;
+    width: 130px;
+    height: 40px;
+    border: none;
+    font-weight: bolder;
+}
+
+.submit-btn:hover{
+  background-color: #4CAF50;
+  border: #3e8e41;
+}

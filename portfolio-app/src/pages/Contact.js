@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 
 const Contact = () => {
   const [showPop, setShowPop] = useState(false);
@@ -47,8 +48,8 @@ const Contact = () => {
 
   return (
     <div className="form-wrapper">
-      <h1>Contact us!</h1>
-      <p>Please enter your information</p>
+      <h1>Contact Me!</h1>
+      <p>Send me a message and let's connect</p>
       <br />
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
@@ -77,7 +78,9 @@ const Contact = () => {
           onChange={handleChange}
         ></textarea>
 
-        <button type="submit">Send message</button>
+        <button type="submit" className="submit-btn">
+          Send message
+        </button>
       </form>
       <div className="loading">{loading && <p>Submitting...</p>}</div>
       {showPop && (
@@ -86,6 +89,19 @@ const Contact = () => {
           <button onClick={() => setShowPop(false)}>Close</button>
         </div>
       )}
+      <div className="social">
+        <ul className="social-list">
+          <li>
+            <BsGithub size={32} />
+          </li>
+          <li>
+            <BsLinkedin size={32} />
+          </li>
+          <li>
+            <BsTwitter size={32} />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
