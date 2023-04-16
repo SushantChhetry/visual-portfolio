@@ -308,3 +308,10 @@ textarea {
   height: 50vh;
   border: solid black;
 }
+
+.header-hover{
+  padding-right: 40px;
+}
+
+.header{}
+
