@@ -1,29 +1,30 @@
 import nodemailer from "nodemailer";
 
-export async function SendMail({ name, email, message }) {
-  let options = {
+export default async function handler(req, res) {
+  const { name, email, message } = req.body;
+
+  const transporter = nodemailer.createTransport({
     host: "smtp.office365.com",
-    port: "587",
-    secure: "false", // true for 465, false for other ports
+    port: 587,
+    secure: false,
     auth: {
-      user: "",
-      pass: "",
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
     },
+  });
+
+  const mailOptions = {
+    from: "sushantchhetry@outlook.com",
+    to: "sushantchhetry@outlook.com",
+    subject: `New message from ${name}`,
+    text: message + " email:" + email,
   };
 
-  //create a reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport(options);
-
-  let mailOptions = {
-    from: `"${name}" <${email}>`, // sender address
-    to: "sushantchhetry@outlook.com", //Receiver address
-    subject: `"${name}" send a message from your portfolio site`, //email subject line
-    text: message, //email body
-    html: `<p>${message}</p>`, //html body
-  };
-
-  //send mail with the defined transport object
-  let info = await transporter.sendMail(mailOptions);
-
-  console.log("Message sent: %s", info.messageId);
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: "Message sent successfully" });
+  } catch (error) {
+    console.log("Error sending message:", error);
+    res.status(500).json({ message: "Error sending message" });
+  }
 }
