@@ -10,11 +10,11 @@ const MovableDiv = ({ xPos, yPos }) => {
     top: position.y,
     left: position.x,
     width: "80%",
-    height: "80%",
-    backgroundColor: "#F5F5F5",
-    borderRadius: " 0 0 10px 10px",
-    boxShadow: " 0 2px 2px rgba(0, 0, 0, 0.25)",
-    transform: "skew(-10deg)",
+    height: "90%",
+    color: "white",
+    cursor: "move",
+    backgroundImage: "url(/portfolio-app/public/wood-texture.jpg)",
+    backgroundRepeat: "repeat",
   });
 
   const handleMouseDown = (event) => {

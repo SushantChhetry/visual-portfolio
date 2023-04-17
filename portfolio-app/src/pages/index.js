@@ -11,11 +11,16 @@ import Intro from "./Intro";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Sushi from "./Sushi";
+import { useState, useEffect } from "react";
+import NewIntro from "./newIntro";
 
 //components
 import Resume from "./Resume";
 
 export default function Home() {
+  const [showDiv, setShowDiv] = useState(false);
+  const [opacityState, setOpacityState] = useState(0);
+
   return (
     <>
       <Head>
@@ -40,7 +45,7 @@ export default function Home() {
           </div>
         </div>
         <section id="intro">
-          <Intro />
+          <NewIntro />
         </section>
         <section id="portfolio">
           <Portfolio />
