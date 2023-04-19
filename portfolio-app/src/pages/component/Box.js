@@ -4,7 +4,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const Box = (props) => {
   const myMesh = useRef();
-  const gltf = useLoader(GLTFLoader, "/scene.gltf");
+  const gltf = useLoader(GLTFLoader, "/sushi/scene.gltf");
   const ref = useRef();
 
   useFrame(({ clock }) => {

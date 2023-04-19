@@ -7,7 +7,7 @@ import Controls from "./component/OrbitControls";
 
 const Sushi = () => {
   return (
-    <div className="scene">
+    <div className="scene" style={{ maxWidth: "300px" }}>
       <h3>AKA SUSHI</h3>
       <Canvas
         shadows

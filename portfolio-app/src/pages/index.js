@@ -12,7 +12,7 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Sushi from "./Sushi";
 import { useState, useEffect } from "react";
-import NewIntro from "./newIntro";
+import NewIntro from "./NewIntro";
 
 //components
 import Resume from "./Resume";
