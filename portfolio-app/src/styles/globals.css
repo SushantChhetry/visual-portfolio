@@ -419,3 +419,14 @@ background-color: #ffb900;
     margin-right: 15px;
     margin-bottom: 10px;
 }
+
+.form-wrap{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+  width: 50%;
+}
+
+.ueats{
+  width: 50%;
+}
