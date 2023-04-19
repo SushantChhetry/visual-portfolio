@@ -427,15 +427,21 @@ display: flex;
  
   justify-content: center;
 }
-
-
-.ueats{
+.ueats {
   width: 50%;
   height: 70vh;
   margin: 2%;
-  display: flex;
+  display: none;
+  /* hide by default */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-left: solid black;
+}
+
+@media screen and (min-width: 768px) {
+  .ueats {
+    display: flex;
+    /* show only when screen width is 768px or greater */
+  }
 }

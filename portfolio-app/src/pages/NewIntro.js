@@ -32,7 +32,15 @@ const NewIntro = () => {
           I am a sushi-loving web developer who creates beautiful and functional
           websites. Friends also call me sushi!
         </p>
-        <ul style={{ listStyle: "none", margin: "10%" }}>
+        <ul
+          style={{
+            listStyle: "none",
+            margin: "10%",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
           <li className="logos">
             <DiJava size={50} />
           </li>
