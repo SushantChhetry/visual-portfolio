@@ -49,10 +49,10 @@ const Contact = () => {
   return (
     <div className="form-wrapper">
       <div className="form-wrap">
-        <h1>Contact Me!</h1>
-        <p>Send me a message and let's connect</p>
-        <br />
         <form onSubmit={handleSubmit}>
+          <h1>Contact Me!</h1>
+          <p>Send me a message and let's connect</p>
+          <br />
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -85,7 +85,7 @@ const Contact = () => {
         </form>
         <div className="ueats">
           <h1>Craving for Sushi?</h1>
-          <p>Order using my doordash app</p>
+          <p>Order using Doordash!</p>
         </div>
         <div className="loading">{loading && <p>Submitting...</p>}</div>
         {showPop && (
