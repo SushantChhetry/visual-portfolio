@@ -6,6 +6,14 @@ import Box from "./component/Box";
 import Controls from "./component/OrbitControls";
 import Cat from "./component/Cat";
 
+import {
+  DiReact,
+  DiJavascript1,
+  DiJava,
+  DiMysql,
+  DiSass,
+} from "react-icons/di";
+
 const NewIntro = () => {
   return (
     <div className="intro-container">
@@ -24,7 +32,25 @@ const NewIntro = () => {
           I am a sushi-loving web developer who creates beautiful and functional
           websites. Friends also call me sushi!
         </p>
+        <ul style={{ listStyle: "none", margin: "10%" }}>
+          <li className="logos">
+            <DiJava size={50} />
+          </li>
+          <li className="logos">
+            <DiJavascript1 size={50} />
+          </li>
+          <li className="logos">
+            <DiReact size={50} />
+          </li>
+          <li className="logos">
+            <DiMysql size={50} />
+          </li>
+          <li className="logos">
+            <DiSass size={50} />
+          </li>
+        </ul>
       </div>
+
       <div className="scene">
         <Canvas
           shadows
