@@ -445,3 +445,7 @@ display: flex;
     /* show only when screen width is 768px or greater */
   }
 }
+
+.nav-open{
+  max-width: 50%;
+}

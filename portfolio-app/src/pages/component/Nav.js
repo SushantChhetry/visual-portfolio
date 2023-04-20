@@ -22,6 +22,38 @@ const Nav = () => {
   return (
     <div className="nav-wrapper">
       <nav className="nav">
+        <div
+          styles={{
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: "20%",
+          }}
+          className="nav-open"
+        >
+          <button
+            onClick={toggleMenu}
+            style={{
+              background: "none",
+              color: "inherit",
+              border: "none",
+              padding: 0,
+              font: "inherit",
+              cursor: "pointer",
+              outline: "inherit",
+            }}
+          >
+            <GiSushis size={32} />
+          </button>
+          {isOpen ? (
+            <div className="nav-list">
+              <ul>
+                <li>Contact</li>
+              </ul>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
         <h1
           className={hovered ? "header-hover" : "header"}
           onMouseEnter={handleMouseEnter}
@@ -29,29 +61,6 @@ const Nav = () => {
         >
           {hovered ? "SUSHI" : "SUSHANT"}
         </h1>
-        <button
-          onClick={toggleMenu}
-          style={{
-            background: "none",
-            color: "inherit",
-            border: "none",
-            padding: 0,
-            font: "inherit",
-            cursor: "pointer",
-            outline: "inherit",
-          }}
-        >
-          <GiSushis size={32} />
-        </button>
-        {isOpen ? (
-          <div className="nav-list">
-            <ul>
-              <li>Contact</li>
-            </ul>
-          </div>
-        ) : (
-          ""
-        )}
       </nav>
     </div>
   );

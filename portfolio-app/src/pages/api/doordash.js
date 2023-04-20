@@ -1,10 +1,7 @@
+// doordash.js
+
 import axios from "axios";
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = "4e1cc841-0a3d-4ad2-9bb3-409de3d8626f";
 
-export const getRestaurants = async (location) => {
-  const url = `https://api.doordash.com/v2/restaurant/?lat=${location.lat}&lng=${location.lng}`;
-  const headers = { Authorization: `Bearer ${API_KEY}` };
-  const response = await axios.get(url, { headers });
-  return response.data;
-};
+export const getRestaurants = async (location) => {};

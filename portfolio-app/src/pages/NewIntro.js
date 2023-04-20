@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import LightBulb from "./component/LightBulb";
