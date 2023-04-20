@@ -341,7 +341,7 @@ background-color: #ffb900;
 .nav-list{
   position: "fixed";
       width: 100vw;
-      z-index: 3;
+      z-index: 5;
       background: #bebebe;
 }
 
@@ -448,4 +448,10 @@ display: flex;
 
 .nav-open{
   max-width: 50%;
+}
+
+
+.nav-links > a{
+  text-decoration: none;
+  font-weight: bolder;
 }

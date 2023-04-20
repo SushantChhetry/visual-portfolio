@@ -46,8 +46,32 @@ const Nav = () => {
           </button>
           {isOpen ? (
             <div className="nav-list">
-              <ul>
-                <li>Contact</li>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: "1%",
+                }}
+              >
+                <li className="nav-links">
+                  <Link href="#intro" legacyBehavior>
+                    <a>Introduction</a>
+                  </Link>
+                </li>
+                <li className="nav-links">
+                  <Link href="#portfolio" legacyBehavior>
+                    <a>Portfolio</a>
+                  </Link>
+                </li>
+                <li className="nav-links">
+                  <Link href="#contact" legacyBehavior>
+                    <a>Contact</a>
+                  </Link>
+                </li>
+                <li className="nav-links">
+                  <Link href={"/Resume"} target="_blank">
+                    Resume
+                  </Link>
+                </li>
               </ul>
             </div>
           ) : (
