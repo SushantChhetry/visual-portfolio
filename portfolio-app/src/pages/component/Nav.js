@@ -54,17 +54,35 @@ const Nav = () => {
               >
                 <li className="nav-links">
                   <Link href="#intro" legacyBehavior>
-                    <a>Introduction</a>
+                    <a
+                      onClick={() => {
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      Introduction
+                    </a>
                   </Link>
                 </li>
                 <li className="nav-links">
                   <Link href="#portfolio" legacyBehavior>
-                    <a>Portfolio</a>
+                    <a
+                      onClick={() => {
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      Portfolio
+                    </a>
                   </Link>
                 </li>
                 <li className="nav-links">
                   <Link href="#contact" legacyBehavior>
-                    <a>Contact</a>
+                    <a
+                      onClick={() => {
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      Contact
+                    </a>
                   </Link>
                 </li>
                 <li className="nav-links">
