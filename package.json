@@ -7,6 +7,7 @@
     "framer-motion": "^10.12.2",
     "intersection-observer": "^0.12.2",
     "react-icons": "^4.8.0",
+    "react-loading": "^2.0.3",
     "react-redux": "^8.0.5",
     "react-slick": "^0.29.0",
     "react-three-fiber": "^6.0.13",
