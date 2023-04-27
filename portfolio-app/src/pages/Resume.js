@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./component/Nav";
+import { BiDownload, BiHomeAlt2 } from "react-icons/bi";
 import Link from "next/link";
 
 const Resume = () => {
@@ -14,17 +14,28 @@ const Resume = () => {
       }}
     >
       <div className="btn-wrapper">
-        <buton className="btn">Download Resume</buton>
         <Link href="/">
-          <buton className="btn">Home</buton>
+          <button className="resume-btn">
+            <BiHomeAlt2 size={32} />
+          </button>
         </Link>
+        <button className="resume-btn">
+          <BiDownload size={32} />
+        </button>
       </div>
-      <img
-        src={`https://cdn-blog.novoresume.com/articles/google-docs-resume-templates/basic-google-docs-resume.png`}
-        alt="resume"
-        className="resume-img"
-        style={{ width: "100vw", height: "auto" }}
-      />
+      <div className="resume">
+        <img
+          src={`https://cdn-blog.novoresume.com/articles/google-docs-resume-templates/basic-google-docs-resume.png`}
+          alt="resume"
+          className="resume-img"
+          style={{
+            width: "90vw",
+            height: "auto",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        />
+      </div>
     </div>
   );
 };

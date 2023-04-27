@@ -20,6 +20,11 @@ import Resume from "./Resume";
 export default function Home() {
   const [showDiv, setShowDiv] = useState(false);
   const [opacityState, setOpacityState] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(!isLoading);
+  }, []);
 
   return (
     <>

@@ -15,7 +15,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "blue", top: "70vh" }}
+      style={{ ...style, display: "block", top: "70vh" }}
       onClick={onClick}
     />
   );
@@ -44,9 +44,8 @@ const portfolio = () => {
     prevArrow: <SamplePrevArrow />,
   };
 
-
   return (
-    <div className="portfolio-wrapper" >
+    <div className="portfolio-wrapper">
       <h1>PROJECTS</h1>
       <Slider {...settings} className="slider">
         <div

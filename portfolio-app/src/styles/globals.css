@@ -29,7 +29,8 @@ body{margin: 0;}
 }
 
 #portfolio{
-  background: red;
+  background: whitesmoke;
+  
 }
 /* nav */
 .nav{
@@ -133,11 +134,14 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 5vh;
+  padding: 5%;
   
 }
 
 .portfolio-wrapper > h1{
-    color: wheat;
+  font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 .proj{
   width: 70vw;
@@ -248,10 +252,9 @@ textarea {
 
 .btn-wrapper{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:50%
+  gap:10%
 }
 
 .btn{
@@ -455,4 +458,23 @@ display: flex;
 .nav-links > a{
   text-decoration: none;
   font-weight: bolder;
+}
+
+.resume-btn{
+  background: none;
+    border: none;
+        font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color: black;
+      padding: 3% 0;
+}
+.resume-btn:hover{
+  color: #ffb900;
+}
+
+.resume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
