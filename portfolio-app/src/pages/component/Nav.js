@@ -5,18 +5,8 @@ import Link from "next/link";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [hovered, setHovered] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false);
   };
 
   return (
@@ -96,13 +86,7 @@ const Nav = () => {
             ""
           )}
         </div>
-        <h1
-          className={hovered ? "header-hover" : "header"}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          {hovered ? "SUSHI" : "SUSHANT"}
-        </h1>
+        <h1 className="header">SUSHANT CHHETRY</h1>
       </nav>
     </div>
   );

@@ -3,7 +3,9 @@
 *{
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Roboto'}
+  font-family: 'Roboto';
+  
+}
 
 html {
     scroll-behavior: smooth;
@@ -20,18 +22,6 @@ body{margin: 0;}
   height: 100vh;
 }
 
-#contact{
-  background: blue;
-}
-
-#intro{
-  background: #3e8e41;
-}
-
-#portfolio{
-  background: whitesmoke;
-  
-}
 /* nav */
 .nav{
   display: flex;
@@ -135,6 +125,7 @@ nav {
   align-items: center;
   gap: 5vh;
   padding: 5%;
+  height: 100vh;
   
 }
 
@@ -221,7 +212,7 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(228, 218, 218);
+background-color: #ffb900;
 }
 
 .sushi-rice{
@@ -337,8 +328,16 @@ background-color: #ffb900;
   border: solid black;
 }
 
+.sushi-wrapper > .header{
+  font-size: 4rem;
+}
+
 .header-hover{
-  padding-right: 40px;
+  text-align: center;
+  background-color: black;
+  color: wheat;
+  padding: 10px 40px;
+  margin: 0px 40px;
 }
 
 
@@ -428,11 +427,11 @@ background: #ffb900;
 display: flex;
  
   align-items: flex-start;
- 
+  height:70vh;
   justify-content: center;
 }
 .ueats {
-  width: 50%;
+  width: 40%;
   height: 70vh;
   margin: 2%;
   display: none;

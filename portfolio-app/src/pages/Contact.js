@@ -56,10 +56,10 @@ const Contact = () => {
 
   return (
     <div className="form-wrapper">
+      <h1 style={{ fontSize: "3rem" }}>Contact Me!</h1>
+      <p>Send me a message and let's connect</p>
       <div className="form-wrap">
         <form onSubmit={handleSubmit}>
-          <h1>Contact Me!</h1>
-          <p>Send me a message and let's connect</p>
           <br />
           <label htmlFor="name">Name:</label>
           <input
@@ -103,7 +103,6 @@ const Contact = () => {
           </div>
         )}
       </div>
-
       <div className="social">
         <ul className="social-list">
           <li>
