@@ -13,6 +13,7 @@
     "react-three-fiber": "^6.0.13",
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
-    "three": "^0.151.3"
+    "three": "^0.151.3",
+    "yelp-fusion": "^3.0.0"
   }
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
-import { getRestaurants } from "./api/doordash";
+import { getRestaurants } from "./api/yelp";
 
 const Contact = () => {
   const [showPop, setShowPop] = useState(false);
@@ -11,13 +11,6 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
-  const [restaurants, setRestaurants] = useState([]);
-
-  useEffect(() => {
-    const location = { lat: 37.7749, lng: -122.4194 }; // San Francisco location
-    getRestaurants(location).then((data) => setRestaurants(data));
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
