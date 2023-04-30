@@ -1,5 +1,7 @@
 import React from "react";
 import { BiDownload, BiHomeAlt2 } from "react-icons/bi";
+import { AiOutlineMail } from "react-icons/ai";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -35,6 +37,11 @@ const Resume = () => {
         <button className="resume-btn" onClick={handleClick}>
           <BiDownload size={32} />
         </button>
+        <Link href="mailto: sushantchhetry@outlook.com">
+          <button className="resume-btn">
+            <AiOutlineMail size={32} />
+          </button>
+        </Link>
       </div>
       <div className="resume">
         <Image src={"/resume.jpg"} width={700} height={900} />
