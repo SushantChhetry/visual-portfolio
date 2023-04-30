@@ -17,7 +17,7 @@ body{margin: 0;}
   list-style: none;
 }
 
-#home, #contact, #intro, #portfolio{
+#home,  #intro, #portfolio{
   width: 100vw;
   height: 100vh;
 }
@@ -326,18 +326,22 @@ background-color: #ffb900;
   width: 100%;
   height: 50vh;
   border: solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.sushi-wrapper > .header{
+.header-wrapper > .header{
   font-size: 4rem;
 }
 
 .header-hover{
   text-align: center;
+    font-size: 4rem;
   background-color: black;
   color: wheat;
   padding: 10px 40px;
-  margin: 0px 40px;
+  margin: 0px 60px;
 }
 
 
@@ -349,9 +353,8 @@ background: #ffb900;
   color: black;}
 
 .form-wrapper{
-  padding: 8% 10%;
-  background: whitesmoke;
-  height: 100%;
+    padding: 5% 2% 0;
+      background: whitesmoke;
   width: 100%;
 
 }

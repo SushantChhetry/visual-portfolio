@@ -24,7 +24,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [hovered, setHovered] = useState(false);
 
-  
   const handleMouseEnter = () => {
     setHovered(true);
   };
@@ -50,13 +49,16 @@ export default function Home() {
           <Nav />
           <div className="sushi-wrapper">
             <h5>Hi! I am</h5>
-            <h1
-              className={hovered ? "header-hover" : "header"}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              {hovered ? "SUSHI" : "SUSHANT"}
-            </h1>
+            <div className="header-wrapper">
+              <h1
+                className={hovered ? "header-hover" : "header"}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                {hovered ? "SUSHI" : "SUSHANT"}
+              </h1>
+            </div>
+
             <Sushi />
             <div className="btn-wrapper">
               <Link href={"/Resume"} target="_blank">

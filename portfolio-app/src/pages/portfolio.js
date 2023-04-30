@@ -5,9 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import Image from "next/image";
-
-import MovableDiv from "./component/MovableDiv";
-
 import "slick-carousel/slick/slick-theme.css";
 
 function SampleNextArrow(props) {
@@ -47,26 +44,58 @@ const portfolio = () => {
   return (
     <div className="portfolio-wrapper">
       <h1>PROJECTS</h1>
+      <p>Check out some of my stuff!</p>
       <Slider {...settings} className="slider">
-        <div
-          style={{
-            display: "block",
-            background: "green",
-          }}
-        >
-          <div className="slide"></div>
+        <div>
+          <div className="slide">
+            <Image src={"/rice.png"} width={300} height={200} />
+            <div className="info">
+              <h4>Alumni Weekened</h4>
+              <p>Website for event</p>
+              <ul>
+                <li>Next</li>
+                <li>React</li>
+              </ul>
+              <ul>
+                <li>Github</li>
+                <li>Site</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div>
-          <div className="slide"></div>
+          <div className="slide">
+            <Image src={"/rice.png"} width={300} height={200} />
+            <div className="info">
+              <h4>Alumni Weekened</h4>
+              <p>Website for event</p>
+              <ul>
+                <li>Next</li>
+                <li>React</li>
+              </ul>
+              <ul>
+                <li>Github</li>
+                <li>Site</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div>
-          <div className="slide"></div>
-        </div>
-        <div>
-          <div className="slide"></div>
-        </div>
-        <div>
-          <div className="slide"></div>
+          <div className="slide">
+            <Image src={"/rice.png"} width={300} height={200} />
+            <div className="info">
+              <h4>Alumni Weekened</h4>
+              <p>Website for event</p>
+              <ul>
+                <li>Next</li>
+                <li>React</li>
+              </ul>
+              <ul>
+                <li>Github</li>
+                <li>Site</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </Slider>
     </div>
