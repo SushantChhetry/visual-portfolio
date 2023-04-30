@@ -488,3 +488,7 @@ display: flex;
   align-items: center;
   height: 100vh;
 }
+
+.social-icons:hover{
+  color: #ffb900;
+}

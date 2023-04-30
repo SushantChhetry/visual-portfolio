@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 import { getRestaurants } from "./api/yelp";
+import Link from "next/link";
 
 const Contact = () => {
   const [showPop, setShowPop] = useState(false);
@@ -99,13 +100,31 @@ const Contact = () => {
       <div className="social">
         <ul className="social-list">
           <li>
-            <BsGithub size={32} />
+            <Link
+              href={"https://github.com/SushantChhetry"}
+              target="_blank"
+              style={{ color: "black" }}
+            >
+              <BsGithub size={32} className="social-icons" />
+            </Link>
           </li>
           <li>
-            <BsLinkedin size={32} />
+            <Link
+              href={"https://www.linkedin.com/in/sushantchhetry/"}
+              target="_blank"
+              style={{ color: "black" }}
+            >
+              <BsLinkedin size={32} className="social-icons" />
+            </Link>
           </li>
           <li>
-            <BsTwitter size={32} />
+            <Link
+              href={"https://twitter.com/SushantChhetryy"}
+              target="_blank"
+              style={{ color: "black" }}
+            >
+              <BsTwitter size={32} className="social-icons" />
+            </Link>
           </li>
         </ul>
       </div>

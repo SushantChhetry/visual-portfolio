@@ -51,7 +51,7 @@ const portfolio = () => {
             <Image src={"/rice.png"} width={300} height={200} />
             <div className="info">
               <h4>Alumni Weekened</h4>
-              <p>Website for event</p>
+              <p>Engaging website for an Alumni Weekend event using Next.js.</p>
               <ul>
                 <li>Next</li>
                 <li>React</li>
