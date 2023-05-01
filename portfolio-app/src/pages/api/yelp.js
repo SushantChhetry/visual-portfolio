@@ -1,7 +1,7 @@
 import React from "react";
 import Yelp from "yelp-fusion";
 
-const API_KEY = ``;
+const API_KEY = `hbTTBsVNv7GMAyhQ2rOB_5U4Hp4KzhzLZwyIXexTgdel2kIaoSTabmO-cRJjM6ItQp8OQ3v9AqxAREWwIMw8Ds-wyUaop90KUQBcaKBmd9Ieu31HQo1i6OFisURNZHYx`;
 
 const yelpClient = Yelp.client(API_KEY);
 

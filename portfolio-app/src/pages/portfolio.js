@@ -1,18 +1,47 @@
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 import "intersection-observer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
-import "slick-carousel/slick/slick-theme.css";
+
+const projects = [
+  {
+    id: 1,
+    image: "/alumni-weekend.jpg",
+    title: "Alumni Weekened",
+    description: "Engaging website for an Alumni Weekend event using Next.js",
+    technologies: ["Next", "React"],
+    githubLink: "https://github.com/example",
+    siteLink: "https://example.com",
+  },
+  {
+    id: 2,
+    image: "/rice.png",
+    title: "Another Project",
+    description: "Website for event",
+    technologies: ["Next", "React"],
+    githubLink: "https://github.com/example",
+    siteLink: "https://example.com",
+  },
+  {
+    id: 3,
+    image: "/rice.png",
+    title: "One More Project",
+    description: "Website for event",
+    technologies: ["Next", "React"],
+    githubLink: "https://github.com/example",
+    siteLink: "https://example.com",
+  },
+];
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      style={{ ...style, display: "block", color: "green" }}
       onClick={onClick}
     />
   );
@@ -23,14 +52,16 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      style={{ ...style, display: "block", color: "green" }}
       onClick={onClick}
     />
   );
 }
 
-const portfolio = () => {
-  var settings = {
+const Portfolio = () => {
+  const [projectsData, setProjectsData] = useState(projects);
+
+  const settings = {
     dots: true,
     fade: true,
     speed: 700,
@@ -46,60 +77,39 @@ const portfolio = () => {
       <h1>PROJECTS</h1>
       <p>Check out some of my stuff!</p>
       <Slider {...settings} className="slider">
-        <div>
-          <div className="slide">
-            <Image src={"/rice.png"} width={300} height={200} />
-            <div className="info">
-              <h4>Alumni Weekened</h4>
-              <p>Engaging website for an Alumni Weekend event using Next.js.</p>
-              <ul>
-                <li>Next</li>
-                <li>React</li>
-              </ul>
-              <ul>
-                <li>Github</li>
-                <li>Site</li>
-              </ul>
+        {projectsData.map((project) => (
+          <div key={project.id}>
+            <div className="slide">
+              <Image src={project.image} width={300} height={200} />
+              <div className="info">
+                <h4>{project.title}</h4>
+                <p>{project.description}</p>
+                <div className="icons-wrapper">
+                  <div className="technology-icons">
+                    {project.technologies.map((technology) => (
+                      <span key={technology}>{technology}</span>
+                    ))}
+                  </div>
+                  <div className="links-icons">
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaGithub />
+                    </a>
+                    <a href={project.siteLink} target="_blank" rel="noreferrer">
+                      <FaExternalLinkAlt />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div className="slide">
-            <Image src={"/rice.png"} width={300} height={200} />
-            <div className="info">
-              <h4>Alumni Weekened</h4>
-              <p>Website for event</p>
-              <ul>
-                <li>Next</li>
-                <li>React</li>
-              </ul>
-              <ul>
-                <li>Github</li>
-                <li>Site</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="slide">
-            <Image src={"/rice.png"} width={300} height={200} />
-            <div className="info">
-              <h4>Alumni Weekened</h4>
-              <p>Website for event</p>
-              <ul>
-                <li>Next</li>
-                <li>React</li>
-              </ul>
-              <ul>
-                <li>Github</li>
-                <li>Site</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   );
 };
 
-export default portfolio;
+export default Portfolio;
