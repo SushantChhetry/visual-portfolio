@@ -4,6 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { DiReact, DiSass, DiNodejsSmall } from "react-icons/di";
+import { TbBrandNextjs } from "react-icons/tb";
+
 import Image from "next/image";
 
 const projects = [
@@ -12,7 +15,12 @@ const projects = [
     image: "/alumni-weekend.jpg",
     title: "Alumni Weekened",
     description: "Engaging website for an Alumni Weekend event using Next.js",
-    technologies: ["Next", "React"],
+    technologies: [
+      <TbBrandNextjs size={26} />,
+      <DiReact size={26} />,
+      <DiSass size={26} />,
+      <DiNodejsSmall size={26} />,
+    ],
     githubLink: "https://github.com/SushantChhetry/visual-portfolio.git",
     siteLink: "https://example.com",
   },
