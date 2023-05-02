@@ -13,7 +13,7 @@ const projects = [
   {
     id: 1,
     image: "/alumni-weekend.jpg",
-    title: "Alumni Weekened",
+    title: "Alumni Weekend",
     description: "Engaging website for an Alumni Weekend event using Next.js",
     technologies: [
       <TbBrandNextjs size={26} />,
