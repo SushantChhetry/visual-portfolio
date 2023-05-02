@@ -13,7 +13,7 @@ const projects = [
     title: "Alumni Weekened",
     description: "Engaging website for an Alumni Weekend event using Next.js",
     technologies: ["Next", "React"],
-    githubLink: "https://github.com/example",
+    githubLink: "https://github.com/SushantChhetry/visual-portfolio.git",
     siteLink: "https://example.com",
   },
   {
@@ -78,9 +78,21 @@ const Portfolio = () => {
       <p>Check out some of my stuff!</p>
       <Slider {...settings} className="slider">
         {projectsData.map((project) => (
-          <div key={project.id}>
+          <div key={project.id} style={{ display: "flex" }}>
             <div className="slide">
-              <Image src={project.image} width={300} height={200} />
+              <a
+                href={project.siteLink}
+                target="_blank"
+                rel="noreferrer"
+                style={{ cursor: "pointer" }}
+              >
+                <Image
+                  src={project.image}
+                  width={300}
+                  height={200}
+                  style={{ margin: "3%" }}
+                />
+              </a>
               <div className="info">
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
@@ -96,10 +108,10 @@ const Portfolio = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <FaGithub />
+                      <FaGithub size={22} className="link-icon" />
                     </a>
                     <a href={project.siteLink} target="_blank" rel="noreferrer">
-                      <FaExternalLinkAlt />
+                      <FaExternalLinkAlt size={22} className="link-icon" />
                     </a>
                   </div>
                 </div>
