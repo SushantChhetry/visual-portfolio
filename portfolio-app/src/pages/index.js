@@ -5,6 +5,9 @@ import styles from "@/styles/Home.module.css";
 import Nav from "./component/Nav";
 import Link from "next/link";
 
+// parallax
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
+
 // pages
 import Start from "./Start";
 import Intro from "./Intro";
@@ -47,37 +50,41 @@ export default function Home() {
       {loading === false ? (
         <main>
           <Nav />
-          <div className="sushi-wrapper">
-            <h5>Hi! I am</h5>
-            <div className="header-wrapper">
-              <h1
-                className={hovered ? "header-hover" : "header"}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                {hovered ? "SUSHI" : "SUSHANT"}
-              </h1>
-            </div>
+          <ParallaxProvider>
+            <div className="sushi-wrapper">
+              <h5>Hi! I am</h5>
+              <div className="header-wrapper">
+                <h1
+                  className={hovered ? "header-hover" : "header"}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {hovered ? "SUSHI" : "SUSHANT"}
+                </h1>
+              </div>
 
-            <Sushi />
-            <div className="btn-wrapper">
-              <Link href={"/Resume"} target="_blank">
-                <button className="btn">Resume</button>
-              </Link>
-              <Link href={"#contact"}>
-                <button className="btn">Connect</button>
-              </Link>
+              <Sushi />
+              <div className="btn-wrapper">
+                <Link href={"/Resume"} target="_blank">
+                  <button className="btn">Resume</button>
+                </Link>
+                <Link href={"#contact"}>
+                  <button className="btn">Connect</button>
+                </Link>
+              </div>
             </div>
-          </div>
-          <section id="intro">
-            <NewIntro />
-          </section>
-          <section id="portfolio">
-            <Portfolio />
-          </section>
-          <section id="contact">
-            <Contact />
-          </section>
+              
+
+            <section id="intro">
+              <NewIntro />
+            </section>
+            <section id="portfolio">
+              <Portfolio />
+            </section>
+            <section id="contact">
+              <Contact />
+            </section>
+          </ParallaxProvider>
         </main>
       ) : (
         <Loading />

@@ -7,6 +7,9 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { DiReact, DiSass, DiNodejsSmall } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
 
+// parallax
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
+
 import Image from "next/image";
 
 const projects = [
@@ -82,8 +85,14 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio-wrapper">
-      <h1>PROJECTS</h1>
-      <p>Check out some of my stuff!</p>
+      <ParallaxProvider>
+        <Parallax speed={5}>
+        <div className="project-title">
+          <h1>PROJECTS</h1>
+          <p>Check out some of my stuff!</p>
+          </div>
+        </Parallax>
+      </ParallaxProvider>
       <Slider {...settings} className="slider">
         {projectsData.map((project) => (
           <div key={project.id} style={{ display: "flex" }}>
