@@ -540,6 +540,17 @@ display: flex;
   align-items: center;
 }
 
+.contact-title{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-title > h1 {
+    font-size: 3rem;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {

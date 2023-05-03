@@ -86,10 +86,10 @@ const Portfolio = () => {
   return (
     <div className="portfolio-wrapper">
       <ParallaxProvider>
-        <Parallax speed={5}>
-        <div className="project-title">
-          <h1>PROJECTS</h1>
-          <p>Check out some of my stuff!</p>
+        <Parallax speed={10}>
+          <div className="project-title">
+            <h1>PROJECTS</h1>
+            <p>Check out some of my stuff!</p>
           </div>
         </Parallax>
       </ParallaxProvider>

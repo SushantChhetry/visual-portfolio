@@ -3,6 +3,9 @@ import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 import { getRestaurants } from "./api/yelp";
 import Link from "next/link";
 
+// parallax
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
+
 const Contact = () => {
   const [showPop, setShowPop] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -50,8 +53,14 @@ const Contact = () => {
 
   return (
     <div className="form-wrapper">
-      <h1 style={{ fontSize: "3rem" }}>Contact Me!</h1>
-      <p>Send me a message and let's connect</p>
+      <ParallaxProvider>
+        <Parallax speed={10}>
+          <div className="contact-title">
+            <h1>Contact Me!</h1>
+            <p>Send me a message and let's connect</p>
+          </div>
+        </Parallax>
+      </ParallaxProvider>
       <div className="form-wrap">
         <form onSubmit={handleSubmit}>
           <br />

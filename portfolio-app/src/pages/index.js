@@ -51,40 +51,40 @@ export default function Home() {
         <main>
           <Nav />
           <ParallaxProvider>
-            <div className="sushi-wrapper">
-              <h5>Hi! I am</h5>
-              <div className="header-wrapper">
-                <h1
-                  className={hovered ? "header-hover" : "header"}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {hovered ? "SUSHI" : "SUSHANT"}
-                </h1>
-              </div>
+            <Parallax translateY={[-15, 15]}>
+              <div className="sushi-wrapper">
+                <h5>Hi! I am</h5>
+                <div className="header-wrapper">
+                  <h1
+                    className={hovered ? "header-hover" : "header"}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {hovered ? "SUSHI" : "SUSHANT"}
+                  </h1>
+                </div>
 
-              <Sushi />
-              <div className="btn-wrapper">
-                <Link href={"/Resume"} target="_blank">
-                  <button className="btn">Resume</button>
-                </Link>
-                <Link href={"#contact"}>
-                  <button className="btn">Connect</button>
-                </Link>
+                <Sushi />
+                <div className="btn-wrapper">
+                  <Link href={"/Resume"} target="_blank">
+                    <button className="btn">Resume</button>
+                  </Link>
+                  <Link href={"#contact"}>
+                    <button className="btn">Connect</button>
+                  </Link>
+                </div>
               </div>
-            </div>
-              
-
-            <section id="intro">
-              <NewIntro />
-            </section>
-            <section id="portfolio">
-              <Portfolio />
-            </section>
-            <section id="contact">
-              <Contact />
-            </section>
+            </Parallax>
           </ParallaxProvider>
+          <section id="intro">
+            <NewIntro />
+          </section>
+          <section id="portfolio">
+            <Portfolio />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
         </main>
       ) : (
         <Loading />
