@@ -504,7 +504,8 @@ display: flex;
   align-items: center;
   margin: 3%;
   gap:10px;
-  width: 100%;
+  width: 80%;
+      font-size: 1.5rem;
 }
 
 .links-icons{
@@ -574,9 +575,9 @@ display: flex;
       
     }
 
-    .info{
-      font-size: 1.5rem;
-    }
+    
+
+
 
 
     .icons-wrapper{
