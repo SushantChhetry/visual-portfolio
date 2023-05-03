@@ -16,9 +16,12 @@ body{margin: 0;}
 .links{
   list-style: none;
 }
-
-#home,  #intro, #portfolio{
-  width: 100vw;
+#home,
+#intro,
+#portfolio {
+  width: 100%;
+  max-width: 1200px;
+  /* set a fixed width that does not exceed the viewport width */
   height: 100vh;
 }
 
@@ -27,6 +30,7 @@ body{margin: 0;}
   display: flex;
   justify-content: space-between;
   color: black;
+  width: 100vw;
 }
 
 
@@ -112,12 +116,14 @@ nav {
     
 }
 
-.intro{
-  width:80vw;
+.intro {
+  width: 80%;
+  max-width: 1200px;
   height: 80vh;
   color: black;
   padding: 5%;
 }
+
 .portfolio-wrapper{
   display: flex;
   flex-direction: column;
@@ -135,8 +141,10 @@ nav {
     text-align: center;
     margin-bottom: 1rem;
 }
-.proj{
-  width: 70vw;
+
+.proj {
+  width: 70%;
+  max-width: 1200px;
   height: 20vh;
   background-color: wheat;
 }
@@ -318,7 +326,7 @@ background-color: #ffb900;
 
 .slider{
     width: 100%;
-      margin: 0 10px;
+     margin: 0 auto;
       /* Optional: add some spacing between slides */
 }
 
@@ -539,6 +547,8 @@ display: flex;
     .slide {
       background: #ffb900;
       width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
       height: 50vh;
       border: solid black;
       display: flex;
