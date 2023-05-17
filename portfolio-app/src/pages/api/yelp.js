@@ -1,20 +1,50 @@
-import React from "react";
-import Yelp from "yelp-fusion";
+import React, { useState } from "react";
 
-const API_KEY = `hbTTBsVNv7GMAyhQ2rOB_5U4Hp4KzhzLZwyIXexTgdel2kIaoSTabmO-cRJjM6ItQp8OQ3v9AqxAREWwIMw8Ds-wyUaop90KUQBcaKBmd9Ieu31HQo1i6OFisURNZHYx`;
+const yelp = () => {
+  const [location, setLocation] = useState("");
+  const [restaurants, setRestaurants] = useState([]);
 
-const yelpClient = Yelp.client(API_KEY);
+  const search = async () => {
+    const apiKey = "YOUR_YELP_FUSION_API_KEY";
+    const url = `https://api.yelp.com/v3/businesses/search?location=${location}&categories=restaurants`;
 
-const searchParams = {
-  term: "sushi",
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+      },
+    });
+
+    const data = await response.json();
+    setRestaurants(data.businesses);
+  };
+
+  return (
+    <div>
+      <div>
+        <h1>Yelp Search</h1>
+        <input
+          type="text"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
+        <button onClick={search}>Search</button>
+        <ul>
+          {restaurants.map((restaurant) => (
+            <li key={restaurant.id}>
+              <h2>{restaurant.name}</h2>
+              <img src={restaurant.image_url} alt={restaurant.name} />
+              <p>{restaurant.location.address1}</p>
+              <p>{restaurant.phone}</p>
+              <p>
+                {restaurant.rating} stars ({restaurant.review_count} reviews)
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      );
+    </div>
+  );
 };
 
-yelpClient
-  .search(searchParams)
-  .then((response) => {
-    const business = response.jsonBody.businesses;
-    console.log(business);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+export default yelp;

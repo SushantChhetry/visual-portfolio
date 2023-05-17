@@ -1,50 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Roboto';
-  
+}
+html,
+body {
+  width: 101%;
+  height: 101%;
+  margin: 0px;
+  padding: 0px;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body{margin: 0;}
-
-.links{
+.links {
   list-style: none;
-}
-#home,
-#intro,
-#portfolio {
-  width: 100%;
-  
-  height: 100vh;
 }
 
 /* nav */
-.nav{
+.nav {
   display: flex;
   justify-content: space-between;
   color: black;
   width: 100%;
 }
 
-
-
-.start-wrapper{
-  background: black;
-  width:100vw;
-  height: 100vh;
-}
 .intro-wrapper {
   background: rgb(228, 218, 218);
   width: 100vw;
   height: 100vh;
   color: black;
-  padding: 10%;;
+  padding: 10%;
 }
 
 .contact-wrapper {
@@ -54,7 +40,6 @@ body{margin: 0;}
   color: black;
   padding: 10%;
 }
-
 
 nav {
   position: fixed;
@@ -66,31 +51,13 @@ nav {
   z-index: 1;
 }
 
-.start-heading {
-  color: transparent;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    color: transparent;
-  }
-
-  100% {
-    opacity: 1;
-    color: wheat;
-  }
-}
-
-.start{
+.start {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   height: 100%;
   color: wheat;
-  
 }
 
 .name {
@@ -105,40 +72,29 @@ nav {
   transform: translateY(0);
 }
 
-.intro-wrapper{
+.intro-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 150%;
   text-align: center;
-    font-weight: bold;
-    
+  font-weight: bold;
 }
 
-.intro {
-  width: 80%;
-  max-width: 1200px;
-  height: 80vh;
-  color: black;
-  padding: 5%;
-}
-
-.portfolio-wrapper{
+.portfolio-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5vh;
   padding: 5%;
   height: 100vh;
-  background:whitesmoke;
-  
+  background: whitesmoke;
 }
 
-.portfolio-wrapper > h1{
+.portfolio-wrapper>h1 {
   font-size: 3rem;
-    text-align: center;
-    margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .proj {
@@ -148,12 +104,16 @@ nav {
   background-color: wheat;
 }
 
-.contact-wrapper{
+.contact-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
 label {
   display: block;
   margin-top: 10px;
@@ -161,13 +121,12 @@ label {
 }
 
 input[type="text"],
+textarea,
 input[type="email"],
-input[type="tel"],
-textarea {
+input[type="tel"] {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  margin: 5px 0 15px;
   border: 2px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -205,34 +164,32 @@ textarea {
   background-color: wheat;
   color: black;
   width: 70vw;
-    height: 20vh;
-    font-weight: bold;
+  height: 20vh;
+  font-weight: bold;
 }
 
 .item.visible {
   opacity: 1;
 }
 
-
-.sushi-wrapper{
+.sushi-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-background-color: #ffb900;
+  background-color: #ffb900;
 }
 
-.sushi-rice{
+.sushi-rice {
   background: white;
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-image: url("/portfolio-app/public/rice.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/portfolio-app/public/rice.png");
 }
 
 .scene {
@@ -245,36 +202,32 @@ background-color: #ffb900;
 }
 
 .canvas {
-  background: transparent; 
- 
+  background: transparent;
 }
 
-.btn-wrapper{
+.btn-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:10%
+  gap: 10%;
 }
 
-.btn{
+.btn {
   background-color: black;
   color: wheat;
-  
-    width: 130px;
-    height: 40px;
-    border: none;
-    font-weight: bolder;
+  width: 130px;
+  height: 40px;
+  border: none;
+  font-weight: bolder;
   margin: 15%;
 }
 
 .btn:hover {
-background-color: #ffb900;
-  border: #2d2614;
- border: solid white;
- color: black;
- font-weight: bolder;
+  background-color: #ffb900;
+  border: solid white;
+  color: black;
+  font-weight: bolder;
 }
-
 .bento-box {
   display: flex;
   flex-wrap: wrap;
@@ -576,10 +529,6 @@ display: flex;
     }
 
     
-
-
-
-
     .icons-wrapper{
       margin-top: 50px;
     }

@@ -24,7 +24,7 @@ const projects = [
       <DiSass size={26} />,
       <DiNodejsSmall size={26} />,
     ],
-    githubLink: "https://github.com/SushantChhetry/visual-portfolio.git",
+    githubLink: "https://github.com/SushantChhetry/alumni-weekend-react-app",
     siteLink: "https://example.com",
   },
   {
@@ -86,7 +86,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio-wrapper">
       <ParallaxProvider>
-        <Parallax speed={10}>
+        <Parallax speed={8}>
           <div className="project-title">
             <h1>PROJECTS</h1>
             <p>Check out some of my stuff!</p>

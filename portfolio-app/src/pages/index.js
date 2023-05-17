@@ -9,8 +9,6 @@ import Link from "next/link";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 // pages
-import Start from "./Start";
-import Intro from "./Intro";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Sushi from "./Sushi";
@@ -18,12 +16,9 @@ import { useState, useEffect } from "react";
 import NewIntro from "./NewIntro";
 
 //components
-import Resume from "./Resume";
 import Loading from "./component/Loading";
 
 export default function Home() {
-  const [showDiv, setShowDiv] = useState(false);
-  const [opacityState, setOpacityState] = useState(0);
   const [loading, setLoading] = useState(true);
   const [hovered, setHovered] = useState(false);
 
