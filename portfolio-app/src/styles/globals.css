@@ -544,3 +544,11 @@ display: flex;
 
 }
 
+@media (max-width: 767px) {
+  .resume-img {
+    width: 100%;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+}

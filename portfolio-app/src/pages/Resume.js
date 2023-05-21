@@ -44,7 +44,7 @@ const Resume = () => {
         </Link>
       </div>
       <div className="resume">
-        <Image src={"/resume.jpg"} width={700} height={900} />
+        <Image src={"/resume.jpg"} className="resume-img" width={700} height={900} />
       </div>
     </div>
   );
