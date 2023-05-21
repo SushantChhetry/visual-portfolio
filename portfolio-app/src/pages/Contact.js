@@ -3,6 +3,9 @@ import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 import { getRestaurants } from "./api/yelp";
 import Link from "next/link";
 
+// container
+import MapContainer from "./component/MapContainer";
+
 // parallax
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
@@ -96,7 +99,7 @@ const Contact = () => {
         </form>
         <div className="ueats">
           <h1>Craving for Sushi?</h1>
-          <p>Order using Doordash!</p>
+          <MapContainer />
         </div>
         <div className="loading">{loading && <p>Submitting...</p>}</div>
         {showPop && (
