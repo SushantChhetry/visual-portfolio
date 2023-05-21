@@ -99,7 +99,10 @@ const Contact = () => {
         </form>
         <div className="ueats">
           <h1>Craving for Sushi?</h1>
-          <MapContainer />
+          <p>Check out some restaurants</p>
+          <div>
+            <MapContainer />
+          </div>
         </div>
         <div className="loading">{loading && <p>Submitting...</p>}</div>
         {showPop && (

@@ -21,7 +21,6 @@ const projects = [
     technologies: [
       <TbBrandNextjs size={26} />,
       <DiReact size={26} />,
-      <DiSass size={26} />,
       <DiNodejsSmall size={26} />,
     ],
     githubLink: "https://github.com/SushantChhetry/alumni-weekend-react-app",
@@ -96,7 +95,7 @@ const Portfolio = () => {
       <Slider {...settings} className="slider">
         {projectsData.map((project) => (
           <div key={project.id} style={{ display: "flex" }}>
-            <div className="slide">
+            <div className="slide" key={`slide ${project.id}`}>
               <a
                 href={project.siteLink}
                 target="_blank"
@@ -108,18 +107,19 @@ const Portfolio = () => {
                   width={300}
                   height={200}
                   style={{ margin: "3%" }}
+                  alt={`project`}
                 />
               </a>
-              <div className="info">
+              <div className="info" key={`info ${project.id}`}>
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
-                <div className="icons-wrapper">
-                  <div className="technology-icons">
+                <div className="icons-wrapper" key={`icon ${project.id}`}>
+                  <div className="technology-icons" key={`tech ${project.id}`}>
                     {project.technologies.map((technology) => (
                       <span key={technology}>{technology}</span>
                     ))}
                   </div>
-                  <div className="links-icons">
+                  <div className="links-icons" key={`link ${project.id}`}>
                     <a
                       href={project.githubLink}
                       target="_blank"

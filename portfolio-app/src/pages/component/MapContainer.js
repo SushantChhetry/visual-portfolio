@@ -3,13 +3,14 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 const MapContainer = () => {
   const mapStyles = {
-    height: "600px",
-    width: "500px",
+    height: "400px",
+    width: "400px",
+    padding: "10px",
   };
 
   const defaultCenter = {
-    lat: 34.052235,
-    lng: -118.243683,
+    lat: 33.749,
+    lng: -84.388,
   };
 
   return (
@@ -19,8 +20,10 @@ const MapContainer = () => {
           mapContainerStyle={mapStyles}
           center={defaultCenter}
           zoom={13}
-          keyword="sushi"
-        ></GoogleMap>
+        >
+          <Marker position={{ lat: 33.753746, lng: -84.38633 }} />
+          <Marker position={{ lat: 33.757669, lng: -84.384682 }} />
+        </GoogleMap>
       </LoadScript>
     </>
   );

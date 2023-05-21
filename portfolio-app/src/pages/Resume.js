@@ -5,8 +5,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import Link from "next/link";
 import Image from "next/image";
 
-import MapContainer from "./component/MapContainer";
-
 const Resume = () => {
   const handleClick = async () => {
     const response = await fetch(
@@ -51,6 +49,7 @@ const Resume = () => {
           className="resume-img"
           width={700}
           height={900}
+          alt="resume"
         />
       </div>
     </div>
