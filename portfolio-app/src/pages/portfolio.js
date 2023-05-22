@@ -32,7 +32,7 @@ const projects = [
     title: "Another Project",
     description: "Website for event",
     technologies: ["Next", "React"],
-    githubLink: "https://github.com/example",
+    githubLink: "https://github.com/SushantChhetry/art",
     siteLink: "https://example.com",
   },
   {
