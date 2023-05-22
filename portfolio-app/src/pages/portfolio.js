@@ -28,21 +28,31 @@ const projects = [
   },
   {
     id: 2,
-    image: "/rice.png",
-    title: "Another Project",
-    description: "Website for event",
-    technologies: ["Next", "React"],
+    image: "/art.png",
+    title: "Art.",
+    description:
+      "Built with Next.js, fetches and displays art from an API in a visually stunning gallery format.",
+    technologies: [
+      <TbBrandNextjs size={26} />,
+      <DiReact size={26} />,
+      <DiNodejsSmall size={26} />,
+    ],
     githubLink: "https://github.com/SushantChhetry/art",
-    siteLink: "https://example.com",
+    siteLink: "",
   },
   {
     id: 3,
     image: "/rice.png",
-    title: "One More Project",
-    description: "Website for event",
-    technologies: ["Next", "React"],
-    githubLink: "https://github.com/example",
-    siteLink: "https://example.com",
+    title: "Form Generator",
+    description:
+      "The Next.js Text Form Generator is a powerful tool that dynamically creates text files with customizable fields and space utilization.",
+    technologies: [
+      <TbBrandNextjs size={26} />,
+      <DiReact size={26} />,
+      <DiNodejsSmall size={26} />,
+    ],
+    githubLink: "https://github.com/SushantChhetry/form-generator",
+    siteLink: "",
   },
 ];
 
@@ -95,7 +105,7 @@ const Portfolio = () => {
       <Slider {...settings} className="slider">
         {projectsData.map((project) => (
           <div key={project.id} style={{ display: "flex" }}>
-            <div className="slide" key={`slide ${project.id}`}>
+            <div className="slide" key={`slide-${project.id}`}>
               <a
                 href={project.siteLink}
                 target="_blank"
@@ -110,16 +120,18 @@ const Portfolio = () => {
                   alt={`project`}
                 />
               </a>
-              <div className="info" key={`info ${project.id}`}>
+              <div className="info" key={`info-${project.id}`}>
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
-                <div className="icons-wrapper" key={`icon ${project.id}`}>
-                  <div className="technology-icons" key={`tech ${project.id}`}>
-                    {project.technologies.map((technology) => (
-                      <span key={technology}>{technology}</span>
+                <div className="icons-wrapper" key={`icon-${project.id}`}>
+                  <div className="technology-icons" key={`tech-${project.id}`}>
+                    {project.technologies.map((technology, index) => (
+                      <span key={`tech-${project.id}-${index}`}>
+                        {technology}
+                      </span>
                     ))}
                   </div>
-                  <div className="links-icons" key={`link ${project.id}`}>
+                  <div className="links-icons" key={`link-${project.id}`}>
                     <a
                       href={project.githubLink}
                       target="_blank"
@@ -127,9 +139,17 @@ const Portfolio = () => {
                     >
                       <FaGithub size={22} className="link-icon" />
                     </a>
-                    <a href={project.siteLink} target="_blank" rel="noreferrer">
-                      <FaExternalLinkAlt size={22} className="link-icon" />
-                    </a>
+                    {project.siteLink ? (
+                      <a
+                        href={project.siteLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FaExternalLinkAlt size={22} className="link-icon" />
+                      </a>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
               </div>
