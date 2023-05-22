@@ -42,7 +42,7 @@ const projects = [
   },
   {
     id: 3,
-    image: "/rice.png",
+    image: "/form.jpg",
     title: "Form Generator",
     description:
       "The Next.js Text Form Generator is a powerful tool that dynamically creates text files with customizable fields and space utilization.",
