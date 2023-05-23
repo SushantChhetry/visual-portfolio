@@ -6,11 +6,11 @@ import Link from "next/link";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 // pages
-import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Sushi from "./Sushi";
 import { useState, useEffect } from "react";
 import NewIntro from "./NewIntro";
+import Portfolio from "./portfolio";
 
 //components
 import Loading from "./component/Loading";
