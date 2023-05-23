@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
-import { getRestaurants } from "./api/yelp";
 import Link from "next/link";
 
 // container
@@ -60,7 +59,7 @@ const Contact = () => {
         <Parallax speed={10}>
           <div className="contact-title">
             <h1>Contact Me!</h1>
-            <p>Send me a message and let's connect</p>
+            <p>Send me a message and let&apos;s connect</p>
           </div>
         </Parallax>
       </ParallaxProvider>
