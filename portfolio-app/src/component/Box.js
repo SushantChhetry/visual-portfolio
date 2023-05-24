@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import { useLoader, useFrame } from "react-three-fiber";
+import { useLoader, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-const Cat = (props) => {
+const Box = (props) => {
   const myMesh = useRef();
-  const gltf = useLoader(GLTFLoader, "/cat/scene.gltf");
+  const gltf = useLoader(GLTFLoader, "/sushi/scene.gltf");
   const ref = useRef();
 
   useFrame(({ clock }) => {
@@ -12,10 +12,10 @@ const Cat = (props) => {
   });
 
   return (
-    <mesh {...props} recieveShadow={true} castShadow ref={myMesh}>
+    <mesh {...props} receiveShadow={true} castShadow ref={myMesh}>
       <primitive ref={ref} object={gltf.scene} />
     </mesh>
   );
 };
 
-export default Cat;
+export default Box;

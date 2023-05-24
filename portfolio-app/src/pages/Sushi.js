@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Canvas } from "@react-three/fiber";
-import LightBulb from "./component/LightBulb";
-import Box from "./component/Box";
-import Controls from "./component/OrbitControls";
+import LightBulb from "../component/LightBulb";
+import Box from "../component/Box";
+import Controls from "../component/OrbitControls";
 
 const Sushi = () => {
   return (

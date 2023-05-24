@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
-import LightBulb from "./component/LightBulb";
-import Box from "./component/Box";
-import Controls from "./component/OrbitControls";
-import Cat from "./component/Cat";
+import LightBulb from "../component/LightBulb";
+import Box from "../component/Box";
+import Controls from "../component/OrbitControls";
+import Cat from "../component/Cat";
 
 // parallex
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";

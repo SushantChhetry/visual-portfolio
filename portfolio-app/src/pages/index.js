@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Nav from "./component/Nav";
+import Nav from "../component/Nav";
 import Link from "next/link";
 
 // parallax
@@ -13,7 +13,7 @@ import NewIntro from "./NewIntro";
 import Portfolio from "./portfolio";
 
 //components
-import Loading from "./component/Loading";
+import Loading from "../component/Loading";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);

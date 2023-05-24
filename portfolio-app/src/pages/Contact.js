@@ -3,7 +3,7 @@ import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 import Link from "next/link";
 
 // container
-import MapContainer from "./component/MapContainer";
+import MapContainer from "../component/MapContainer";
 
 // parallax
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
