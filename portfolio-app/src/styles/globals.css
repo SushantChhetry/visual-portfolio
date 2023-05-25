@@ -309,8 +309,30 @@ background: #ffb900;
 display: flex;
  
   align-items: flex-start;
-  height:70vh;
+  height:80vh;
   justify-content: center;
+}
+
+.dialog{
+  display: flex;
+    justify-content: center;
+    background: #ffb900;
+   
+}
+
+.submitted-message{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.submitted-message > button{
+  background: black;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    color: white;
+    padding: 3% 0;
 }
 .ueats {
   width: 40%;

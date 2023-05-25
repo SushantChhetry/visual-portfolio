@@ -65,6 +65,15 @@ const Contact = () => {
       </ParallaxProvider>
       <div className="form-wrap">
         <form onSubmit={handleSubmit}>
+          <div className="dialog">
+            {loading && <p>Submitting...</p>}
+            {showPop && (
+              <div className="submitted-message">
+                <p>Your form has been submitted!</p>
+                <button onClick={() => setShowPop(false)}>Close</button>
+              </div>
+            )}
+          </div>
           <br />
           <label htmlFor="name">Name:</label>
           <input
@@ -96,6 +105,7 @@ const Contact = () => {
             Send message
           </button>
         </form>
+
         <div className="ueats">
           <h1>Craving for Sushi?</h1>
           <p>Check out some restaurants</p>
@@ -103,14 +113,8 @@ const Contact = () => {
             <MapContainer />
           </div>
         </div>
-        <div className="loading">{loading && <p>Submitting...</p>}</div>
-        {showPop && (
-          <div className="submitted-message">
-            <p>Your form has been submitted!</p>
-            <button onClick={() => setShowPop(false)}>Close</button>
-          </div>
-        )}
       </div>
+
       <div className="social">
         <ul className="social-list">
           <li>
