@@ -13,6 +13,10 @@ const MapContainer = () => {
     lng: -84.388,
   };
 
+  const mapOptions = {
+    disableDefaultUI: true,
+  };
+
   return (
     <>
       <LoadScript googleMapsApiKey="AIzaSyB4ZoDemL-vFUroYWu_VUg-M-zbSK7tj64">
@@ -20,6 +24,7 @@ const MapContainer = () => {
           mapContainerStyle={mapStyles}
           center={defaultCenter}
           zoom={13}
+          options={mapOptions}
         >
           <Marker position={{ lat: 33.753746, lng: -84.38633 }} />
           <Marker position={{ lat: 33.757669, lng: -84.384682 }} />
