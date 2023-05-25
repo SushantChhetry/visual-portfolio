@@ -106,20 +106,14 @@ const Portfolio = () => {
         {projectsData.map((project) => (
           <div key={project.id} style={{ display: "flex" }}>
             <div className="slide" key={`slide-${project.id}`}>
-              <a
-                href={project.siteLink}
-                target="_blank"
-                rel="noreferrer"
-                style={{ cursor: "pointer" }}
-              >
-                <Image
-                  src={project.image}
-                  width={300}
-                  height={200}
-                  style={{ margin: "3%" }}
-                  alt={`project`}
-                />
-              </a>
+              <Image
+                src={project.image}
+                width={300}
+                height={200}
+                style={{ margin: "3%" }}
+                alt={`project`}
+              />
+
               <div className="info" key={`info-${project.id}`}>
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
